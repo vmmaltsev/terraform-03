@@ -1,0 +1,20 @@
+[webservers]
+
+%{~ for i in jsondecode(webservers) ~}
+${i["name"]}   ansible_host=${i["network_interface"]}
+
+%{~ endfor ~}
+
+[databases]
+
+%{~ for i in jsondecode(databases) ~}
+${i["name"]}   ansible_host=${i["network_interface"]}
+
+%{~ endfor ~}
+
+[storage]
+
+%{~ for i in jsondecode(storage) ~}
+${i["name"]}   ansible_host=${i["network_interface"]}
+
+%{~ endfor ~}

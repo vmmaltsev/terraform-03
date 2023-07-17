@@ -30,3 +30,8 @@ variable "vpc_name" {
   default     = "develop"
   description = "VPC network&subnet name"
 }
+
+variable "vm_web_image_family" {
+  type    = string
+  default = "fd843htdp8usqsiji0bb"
+}
